@@ -1,0 +1,86 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+.form-control:focus {
+  box-shadow: 0px 0px 5px 2px #626262;
+}
+.nav-item .nav-link {
+  color: #fff;
+}
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
+  color: #626262;
+}
+.hero-section {
+  width: 100%;
+  height: calc(100vh - 56px);
+}
+.hero-section .container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.hero-section img {
+  width: 600px;
+}
+.hero-section .hero-text {
+  margin-top: 100px;
+}
+.hero-section .hero-text h1 {
+  position: relative;
+}
+.hero-section .hero-text h1::before {
+  content: "";
+  position: absolute;
+  top: -45px;
+  left: -15px;
+  background-image: url("images/heart.svg");
+  width: 40px;
+  height: 40px;
+}
+
+.hero-section .hero-text h2 {
+  color: orange;
+}
+.hero-section .arrow-icon {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 20px);
+}
+.hero-section .arrow-icon svg {
+  width: 40px;
+  animation: arrow infinite 0.8s alternate;
+}
+@keyframes arrow {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@media (max-width: 765px) {
+  .hero-section img {
+    width: 400px;
+  }
+  .hero-section .hero-text h1::before {
+    left: 0px;
+  }
+  .hero-section .arrow-icon {
+    left: calc(50% - 15px);
+  }
+  .hero-section .arrow-icon svg {
+    width: 30px;
+  }
+}
+@media (max-width: 450px) {
+  .hero-section img {
+    width: 300px;
+  }
+}
+
+body {
+  height: 5000px;
+}
